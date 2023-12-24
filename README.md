@@ -1,22 +1,30 @@
-# socialmedia_link_extractor
-Our Social Media Link Scraper is a powerful Python-based tool designed to effortlessly gather social media information for businesses. By providing the company's name and address as input, our tool utilizes advanced web scraping techniques, including threading, to swiftly retrieve the Twitter profile link associated with the specified business.
+# Gym Twitter URL Extractor
 
-Key Features:
+This Python script fetches Twitter URLs for gyms listed in an Excel file. It utilizes multithreading to expedite the process of searching for Twitter handles associated with gym names and addresses.
 
-Efficiency: Utilizes threading for fast and efficient data retrieval from the web.
-User-Friendly: A simple and intuitive interface makes it accessible to users of all levels.
-Accurate Results: Provides precise Twitter profile links based on the provided company details.
-Time-Saving: Automates the process of finding social media links, saving valuable time.
-Customizable: Built to accommodate future expansion and customization for additional platforms.
-Whether you're a marketer, researcher, or simply curious about a company's online presence, our Social Media Link Scraper simplifies the process of finding Twitter profiles, making it an invaluable tool for your web data needs.
+## Script Overview
 
+The script performs the following tasks:
 
+- **Data Loading**: Loads gym information from an Excel file (`Data Science Batch Task Sheet.xlsx`).
+- **Twitter URL Retrieval**: Searches for Twitter URLs associated with gym names and addresses using the Google search API.
+- **Multithreading**: Utilizes threading to process gym information concurrently, enhancing efficiency.
+- **Caching**: Stores and retrieves previously searched gym Twitter URLs from a cache (`twitter_cache`) to optimize search speed.
 
+## Usage
 
+1. **Input File**: Ensure the Excel file containing gym information (`Data Science Batch Task Sheet.xlsx`) is in the same directory as the script.
+2. **Adjust Threads**: Modify the `num_threads` variable based on available system resources for concurrent processing.
+3. **Run the Script**: Execute the script in a Jupyter Notebook or Python environment.
 
-"
+## Important Note
 
+- **Resource Consideration**: Adjust the number of threads (`num_threads`) based on system resources to optimize performance without overwhelming the system.
 
+## Output
 
+The script saves the updated gym information with Twitter URLs to a new Excel file named `gyms_with_twitter_urls.xlsx`.
+
+Feel free to explore and modify the script according to specific requirements or improvements.
 
 
